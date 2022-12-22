@@ -1,0 +1,12 @@
+Object,Type_False_Deviation,Caused,Total_deviation
+HD,Algorithm error,direction,515
+HD,Algorithm error,way/elevation,850
+HD,Algorithm error,rules,166
+HD,Algorithm error,others,73
+HD,False detection,False detection,234
+LV,Algorithm error,direction,72
+LV,Algorithm error,way/elevation,122
+LV,Algorithm error,rules,62
+LV,Algorithm error,others,14
+LV,False detection,False detection,20
+Person,False detection,False detection,734
