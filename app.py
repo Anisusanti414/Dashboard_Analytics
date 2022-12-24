@@ -62,7 +62,7 @@ total_validasi = [
     ]),
 ]
 ## PIE CHART 1
-data  = ['dev','val']
+data  = ['Dev','Val']
 count = [nov['Num_dev'].sum(), nov['Num_Val'].sum()]
 data_nov = {
     'data': data,
@@ -112,15 +112,16 @@ val2 = px.line(nov,
 pie2 = px.pie(
     nov2,
     values='Jumlah Deviasi',
-    names='type_validation',
-    color_discrete_sequence=['mediumseagreen','red'],
+    names='Type Validation',
+    color = 'Type Validation',
+    color_discrete_sequence=['red','mediumseagreen'],
     template='ggplot2',
     #hole=0.3,
-    title = 'Percentage True and False Warning Each Object'
+    title = 'Percentage True and False Warning'
 )
 
 ### BAR 
-nov2_2 = pd.crosstab(index=[nov2['type_object'],nov2['type_validation']],
+nov2_2 = pd.crosstab(index=[nov2['type_object'],nov2['Type Validation']],
             columns='num_dev',
             values=nov2['Jumlah Deviasi'],
             aggfunc='sum')
@@ -131,8 +132,8 @@ bar1 = px.bar(
     nov2_2.sort_values('num_dev', ascending = False),
     x = 'type_object',
     y = 'num_dev',
-    color = 'type_validation',
-    color_discrete_sequence=['mediumseagreen','red'],
+    color = 'Type Validation',
+    color_discrete_sequence=['red','mediumseagreen'],
     title='Number of Type Validation Each Object',
     labels = {
         'num_dev':'Number of Deviation',
