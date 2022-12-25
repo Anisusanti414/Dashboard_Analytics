@@ -1,87 +1,87 @@
 Tanggal,cctv_id,type_object,Type Validation,Jumlah Deviasi
-01/11/2022,3,Person,False,3
-02/11/2022,1,HD,True,10
-02/11/2022,1,LV,False,10
-02/11/2022,1,Person,True,21
-02/11/2022,2,HD,True,1
-02/11/2022,2,HD,False,10
-02/11/2022,2,LV,False,25
-02/11/2022,2,Person,False,62
-02/11/2022,3,Person,True,4
-02/11/2022,3,Person,False,6
-02/11/2022,5,HD,False,10
-02/11/2022,5,LV,False,10
-02/11/2022,5,Person,True,20
-03/11/2022,2,HD,False,15
-03/11/2022,3,HD,True,30
-03/11/2022,3,LV,False,12
-03/11/2022,3,Person,True,1
-03/11/2022,3,Person,False,27
-04/11/2022,2,HD,True,38
-04/11/2022,2,LV,False,2
-04/11/2022,2,Person,True,1
-04/11/2022,2,Person,True,23
-05/11/2022,1,HD,True,3
-05/11/2022,1,HD,False,10
-05/11/2022,1,LV,False,45
-05/11/2022,1,Person,True,6
-05/11/2022,1,Person,False,21
-05/11/2022,2,Person,True,35
-05/11/2022,2,Person,False,3
-05/11/2022,5,HD,True,38
-06/11/2022,1,HD,False,89
-06/11/2022,2,HD,False,52
-06/11/2022,5,HD,True,35
-07/11/2022,1,HD,False,2
-07/11/2022,1,Person,False,22
-07/11/2022,2,HD,True,32
-07/11/2022,2,Person,True,1
-07/11/2022,2,Person,False,4
-09/11/2022,1,Person,True,20
-09/11/2022,2,HD,False,1
-09/11/2022,5,HD,False,4
-11/11/2022,2,HD,False,5
-11/11/2022,2,Person,False,1
-11/11/2022,5,Person,False,2
-12/11/2022,1,HD,True,1
-12/11/2022,1,HD,False,76
-13/11/2022,1,HD,True,56
-13/11/2022,1,HD,False,30
-13/11/2022,1,Person,False,1
-14/11/2022,1,HD,True,59
-14/11/2022,1,LV,False,10
-14/11/2022,1,Person,True,19
-15/11/2022,1,HD,False,2
-16/11/2022,2,HD,True,14
-17/11/2022,2,HD,True,44
-17/11/2022,2,LV,True,36
-17/11/2022,2,Person,True,11
-17/11/2022,2,Person,True,45
-19/11/2022,2,HD,False,33
-19/11/2022,2,LV,False,20
-19/11/2022,2,Person,False,28
-20/11/2022,2,HD,False,10
-20/11/2022,2,Person,False,8
-23/11/2022,1,Person,True,36
-23/11/2022,2,HD,False,16
-23/11/2022,2,LV,False,8
-23/11/2022,2,Person,True,27
-25/11/2022,1,HD,False,1
-26/11/2022,2,HD,True,36
-26/11/2022,2,LV,False,1
-26/11/2022,2,Person,True,4
-26/11/2022,2,Person,True,34
-27/11/2022,2,HD,True,11
-27/11/2022,2,Person,True,29
-28/11/2022,2,HD,False,56
-28/11/2022,2,LV,False,10
-28/11/2022,2,Person,True,36
-28/11/2022,2,Person,False,7
-29/11/2022,1,HD,True,4
-29/11/2022,1,HD,True,78
-29/11/2022,1,LV,False,5
-29/11/2022,1,Person,True,41
-29/11/2022,1,Person,False,18
-30/11/2022,1,HD,True,3
-30/11/2022,1,HD,True,32
-30/11/2022,1,Person,False,9
+01/11/2022,3,Person,False ,3
+02/11/2022,1,HD,True ,10
+02/11/2022,1,LV,False ,10
+02/11/2022,1,Person,True ,21
+02/11/2022,2,HD,True ,1
+02/11/2022,2,HD,False ,10
+02/11/2022,2,LV,False ,25
+02/11/2022,2,Person,False ,62
+02/11/2022,3,Person,True ,4
+02/11/2022,3,Person,False ,6
+02/11/2022,5,HD,False ,10
+02/11/2022,5,LV,False ,10
+02/11/2022,5,Person,True ,20
+03/11/2022,2,HD,False ,15
+03/11/2022,3,HD,True ,30
+03/11/2022,3,LV,False ,12
+03/11/2022,3,Person,True ,1
+03/11/2022,3,Person,False ,27
+04/11/2022,2,HD,True ,38
+04/11/2022,2,LV,False ,2
+04/11/2022,2,Person,True ,1
+04/11/2022,2,Person,True ,23
+05/11/2022,1,HD,True ,3
+05/11/2022,1,HD,False ,10
+05/11/2022,1,LV,False ,45
+05/11/2022,1,Person,True ,6
+05/11/2022,1,Person,False ,21
+05/11/2022,2,Person,True ,35
+05/11/2022,2,Person,False ,3
+05/11/2022,5,HD,True ,38
+06/11/2022,1,HD,False ,89
+06/11/2022,2,HD,False ,52
+06/11/2022,5,HD,True ,35
+07/11/2022,1,HD,False ,2
+07/11/2022,1,Person,False ,22
+07/11/2022,2,HD,True ,32
+07/11/2022,2,Person,True ,1
+07/11/2022,2,Person,False ,4
+09/11/2022,1,Person,True ,20
+09/11/2022,2,HD,False ,1
+09/11/2022,5,HD,False ,4
+11/11/2022,2,HD,False ,5
+11/11/2022,2,Person,False ,1
+11/11/2022,5,Person,False ,2
+12/11/2022,1,HD,True ,1
+12/11/2022,1,HD,False ,76
+13/11/2022,1,HD,True ,56
+13/11/2022,1,HD,False ,30
+13/11/2022,1,Person,False ,1
+14/11/2022,1,HD,True ,59
+14/11/2022,1,LV,False ,10
+14/11/2022,1,Person,True ,19
+15/11/2022,1,HD,False ,2
+16/11/2022,2,HD,True ,14
+17/11/2022,2,HD,True ,44
+17/11/2022,2,LV,True ,36
+17/11/2022,2,Person,True ,11
+17/11/2022,2,Person,True ,45
+19/11/2022,2,HD,False ,33
+19/11/2022,2,LV,False ,20
+19/11/2022,2,Person,False ,28
+20/11/2022,2,HD,False ,10
+20/11/2022,2,Person,False ,8
+23/11/2022,1,Person,True ,36
+23/11/2022,2,HD,False ,16
+23/11/2022,2,LV,False ,8
+23/11/2022,2,Person,True ,27
+25/11/2022,1,HD,False ,1
+26/11/2022,2,HD,True ,36
+26/11/2022,2,LV,False ,1
+26/11/2022,2,Person,True ,4
+26/11/2022,2,Person,True ,34
+27/11/2022,2,HD,True ,11
+27/11/2022,2,Person,True ,29
+28/11/2022,2,HD,False ,56
+28/11/2022,2,LV,False ,10
+28/11/2022,2,Person,True ,36
+28/11/2022,2,Person,False ,7
+29/11/2022,1,HD,True ,4
+29/11/2022,1,HD,True ,78
+29/11/2022,1,LV,False ,5
+29/11/2022,1,Person,True ,41
+29/11/2022,1,Person,False ,18
+30/11/2022,1,HD,True ,3
+30/11/2022,1,HD,True ,32
+30/11/2022,1,Person,False ,9
