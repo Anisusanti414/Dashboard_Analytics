@@ -81,6 +81,7 @@ pie1 = px.pie(
     height=490
 )
 
+#nov['Date'] = nov['Date'].astype('datetime64')
 ## LINE
 dev = px.line(nov, 
               x="Date", 
@@ -133,7 +134,7 @@ bar1 = px.bar(
     x = 'type_object',
     y = 'num_dev',
     color = 'Type Validation',
-    color_discrete_sequence=['red','mediumseagreen'],
+    color_discrete_sequence=['mediumseagreen','red'],
     title='Number of Type Validation Each Object',
     labels = {
         'num_dev':'Number of Deviation',
