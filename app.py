@@ -179,22 +179,45 @@ encode = base64.b64encode(open(path_img, 'rb').read()).decode('ascii')
 #                              pull=[0.2,0],
 #                             title = 'Percentage Reason of False Warning')])
 
-### LOLYPOP
-# nov3_3 = pd.crosstab(index=nov3['Caused'],
-#             columns='Total_deviation',
-#             values=nov3['Total_deviation'],
-#             aggfunc='sum')
+## LOLYPOP
+nov3_hd = nov3[nov3['Object']=='HD']
+nov3_hd_1 = nov3_hd[nov3_hd['Type_False_Deviation']!='False detection']
+nov3_3 = pd.crosstab(index=nov3_hd_1['Caused'],
+            columns='Total_deviation',
+            values=nov3_hd_1['Total_deviation'],
+            aggfunc='sum')
 
-# nov3_3.reset_index(inplace = True)
+nov3_3.reset_index(inplace = True)
 
-# lolypop = px.bar(
-#     nov3_3.sort_values('Total_deviation', ascending = False),
-#     x = 'Total_deviation',
-#     y = 'Caused',
-#     color = 'Caused',
-#     color_discrete_sequence=['red','blue','green','purple','brown'],
-#     title='Number of Caused False Warning Each Object'
-# )
+lolypop1 = px.bar(
+    nov3_3.sort_values('Total_deviation', ascending = False),
+    x = 'Total_deviation',
+    y = 'Caused',
+    color = 'Caused',
+    color_discrete_sequence=['darkgreen','forestgreen','lightgreen','lightgreen'],
+    title='Number of Caused False Warning HD',
+    height=515
+)
+
+## LOLYPOP 2
+nov3_lv = nov3[nov3['Object']=='LV']
+nov3_lv_1 = nov3_lv[nov3_lv['Type_False_Deviation']!='False detection']
+nov3_3_lv = pd.crosstab(index=nov3_lv_1['Caused'],
+            columns='Total_deviation',
+            values=nov3_lv_1['Total_deviation'],
+            aggfunc='sum')
+
+nov3_3_lv.reset_index(inplace = True)
+
+lolypop2 = px.bar(
+    nov3_3_lv.sort_values('Total_deviation', ascending = False),
+    x = 'Total_deviation',
+    y = 'Caused',
+    color = 'Caused',
+    color_discrete_sequence=['darkgreen','forestgreen','lightgreen','lightgreen'],
+    title='Number of Caused False Warning LV',
+    height=515
+)
 
 ## --- LAYOUT
 app.layout = html.Div(children=[
@@ -270,64 +293,64 @@ app.layout = html.Div(children=[
         
         
 
-        ## ROW 2
-        dbc.Row([
-            ##--COLUMN 1
-            dbc.Col([ 
-                dbc.Card(
-                    dcc.Graph(
-                        id='plot_pie1',
-                        figure = pie1,
+        # # ROW 2
+        # dbc.Row([
+        #     ##--COLUMN 1
+        #     dbc.Col([ 
+        #         dbc.Card(
+        #             dcc.Graph(
+        #                 id='plot_pie1',
+        #                 figure = pie1,
 
-                    ),
-                ),
+        #             ),
+        #         ),
 
-            ], 
-            width = 5),
-            ## -- COLUMN 2
-            dbc.Col([ 
-                dbc.Card([
-                    dbc.Tabs([
-                        ### tab 2
-                        dbc.Tab([
-                            dcc.Graph(
-                                id='plot_line3',
-                                figure = val2,
+        #     ], 
+        #     width = 5),
+        #     ## -- COLUMN 2
+        #     dbc.Col([ 
+        #         dbc.Card([
+        #             dbc.Tabs([
+        #                 ### tab 2
+        #                 dbc.Tab([
+        #                     dcc.Graph(
+        #                         id='plot_line3',
+        #                         figure = val2,
 
-                                    ),
+        #                             ),
 
-                        ],
-                        label = 'Trend Val/Dev'),
-                        ### tab 2
-                        dbc.Tab([
-                                dcc.Graph(
-                                    id='plot_line2',
-                                    figure = val,
+        #                 ],
+        #                 label = 'Trend Val/Dev'),
+        #                 ### tab 2
+        #                 dbc.Tab([
+        #                         dcc.Graph(
+        #                             id='plot_line2',
+        #                             figure = val,
 
-                                        ),
+        #                                 ),
 
-                            ],
-                            label = 'Validation'),
-                        ### tab 3
-                        dbc.Tab([
-                                dcc.Graph(
-                                    id='plot_line1',
-                                    figure = dev,
+        #                     ],
+        #                     label = 'Validation'),
+        #                 ### tab 3
+        #                 dbc.Tab([
+        #                         dcc.Graph(
+        #                             id='plot_line1',
+        #                             figure = dev,
 
-                                        ),
+        #                                 ),
 
-                            ],
-                            label = 'Deviation'),
+        #                     ],
+        #                     label = 'Deviation'),
 
                     
-                    ],),
-                ]),
-            ], 
-            width = 7),
+        #             ],),
+        #         ]),
+        #     ], 
+        #     width = 7),
 
         
-        ]),
-        html.Br(),
+        # ]),
+        # html.Br(),
 
         # ### BREAK
         # dbc.Row([
@@ -424,17 +447,46 @@ app.layout = html.Div(children=[
             ],
             width = 5),
             ## -- COLUMN 2
-            dbc.Col([ 
+             dbc.Col([ 
                 dbc.Card([
-                    dcc.Graph(
-                        id = 'plot_lolypop',
-                        #figure = lolypop
-                    ),
+                    dbc.Tabs([
+                        ### tab 2
+                        dbc.Tab([
+                            dcc.Graph(
+                                id='plot_lolypop1',
+                                figure = lolypop1,
 
-                ]), 
+                                    ),
 
-            ],
+                        ],
+                        label = 'HD'),
+                        ### tab 2
+                        dbc.Tab([
+                                dcc.Graph(
+                                    id='plot_lolypop2',
+                                    figure = lolypop2,
+
+                                        ),
+
+                            ],
+                            label = 'LV'),
+
+                    
+                    ],),
+                ]),
+            ], 
             width = 7),
+            # dbc.Col([ 
+            #     dbc.Card([
+            #         dcc.Graph(
+            #             id = 'plot_lolypop',
+            #             #figure = lolypop
+            #         ),
+
+            #     ]), 
+
+            # ],
+            # width = 7),
 
 
         
@@ -487,35 +539,35 @@ def update_plot3(Object_name):
     return pie3
 
 ### CALLBACK PIE
-@app.callback(
-    Output(component_id='plot_lolypop', component_property='figure'),
-    Input(component_id='Choose_Object',component_property='value')
-)
+# @app.callback(
+#     Output(component_id='plot_lolypop', component_property='figure'),
+#     Input(component_id='Choose_Object',component_property='value')
+# )
 
-def update_plot3(Object_name):
-    nov3_1 = nov3[nov3['Object']==Object_name]
+# def update_plot3(Object_name):
+#     nov3_1 = nov3[nov3['Object']==Object_name]
     
-    #Visualization
-## BAR ACCURACY
-    #nov3_2_1 = nov3_1_1[nov3_1_1['Type_False_Deviation'] == 'Algorithm error']
-    nov3_3 = pd.crosstab(index=nov3_1['Caused'],
-            columns='Total_deviation',
-            values=nov3_1['Total_deviation'],
-            aggfunc='sum')
+#     #Visualization
+# ## BAR ACCURACY
+#     #nov3_2_1 = nov3_1_1[nov3_1_1['Type_False_Deviation'] == 'Algorithm error']
+#     nov3_3 = pd.crosstab(index=nov3_1['Caused'],
+#             columns='Total_deviation',
+#             values=nov3_1['Total_deviation'],
+#             aggfunc='sum')
 
-    nov3_3.reset_index(inplace = True)
+#     nov3_3.reset_index(inplace = True)
 
-    lolypop = px.bar(
-        nov3_3.sort_values('Total_deviation', ascending = False),
-        x = 'Total_deviation',
-        y = 'Caused',
-        color = 'Caused',
-        color_discrete_sequence=['darkgreen','green','lime','limegreen','lightgreen'],
-        labels = {
-        'Total_deviation':'Total of Deviaton'},
-        title='Number of Caused False Warning Each Object',
-        height=555
-    )
+#     lolypop = px.bar(
+#         nov3_3.sort_values('Total_deviation', ascending = False),
+#         x = 'Total_deviation',
+#         y = 'Caused',
+#         color = 'Caused',
+#         color_discrete_sequence=['darkgreen','green','lime','limegreen','lightgreen'],
+#         labels = {
+#         'Total_deviation':'Total of Deviaton'},
+#         title='Number of Caused False Warning Each Object',
+#         height=555
+#     )
 
     return lolypop
 ## 3. Start the Dash server
