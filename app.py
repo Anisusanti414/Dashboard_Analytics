@@ -183,15 +183,15 @@ encode = base64.b64encode(open(path_img, 'rb').read()).decode('ascii')
 nov3_hd = nov3[nov3['Object']=='HD']
 nov3_hd_1 = nov3_hd[nov3_hd['Type_False_Deviation']!='False detection']
 nov3_3 = pd.crosstab(index=nov3_hd_1['Caused'],
-            columns='Total_deviation',
+            columns='Total Deviation',
             values=nov3_hd_1['Total_deviation'],
             aggfunc='sum')
 
 nov3_3.reset_index(inplace = True)
 
 lolypop1 = px.bar(
-    nov3_3.sort_values('Total_deviation', ascending = False),
-    x = 'Total_deviation',
+    nov3_3.sort_values('Total Deviation', ascending = False),
+    x = 'Total Deviation',
     y = 'Caused',
     color = 'Caused',
     color_discrete_sequence=['darkgreen','forestgreen','lightgreen','lightgreen'],
@@ -203,15 +203,15 @@ lolypop1 = px.bar(
 nov3_lv = nov3[nov3['Object']=='LV']
 nov3_lv_1 = nov3_lv[nov3_lv['Type_False_Deviation']!='False detection']
 nov3_3_lv = pd.crosstab(index=nov3_lv_1['Caused'],
-            columns='Total_deviation',
+            columns='Total Deviation',
             values=nov3_lv_1['Total_deviation'],
             aggfunc='sum')
 
 nov3_3_lv.reset_index(inplace = True)
 
 lolypop2 = px.bar(
-    nov3_3_lv.sort_values('Total_deviation', ascending = False),
-    x = 'Total_deviation',
+    nov3_3_lv.sort_values('Total Deviation', ascending = False),
+    x = 'Total Deviation',
     y = 'Caused',
     color = 'Caused',
     color_discrete_sequence=['darkgreen','forestgreen','lightgreen','lightgreen'],
