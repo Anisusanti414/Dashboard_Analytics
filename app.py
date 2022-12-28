@@ -133,6 +133,7 @@ bar1 = px.bar(
     nov2_2.sort_values('num_dev', ascending = False),
     x = 'type_object',
     y = 'num_dev',
+    text_auto='.2s',
     color = 'Type Validation',
     color_discrete_sequence=['mediumseagreen','red'],
     title='Number of Type Validation Each Object',
@@ -153,6 +154,7 @@ bar2 = px.bar(
     nov4_1.sort_values('Num of Deviation', ascending = False),
     x = 'type_object',
     y = 'Num of Deviation',
+    text_auto='.2s',
     color = 'report_from',
     color_discrete_sequence=['darkblue','orange'],
     title='Comparison of Deviation from MEA and BEATS',
@@ -193,6 +195,7 @@ lolypop1 = px.bar(
     nov3_3.sort_values('Total Deviation', ascending = False),
     x = 'Total Deviation',
     y = 'Caused',
+    text_auto='.2s',
     color = 'Caused',
     color_discrete_sequence=['darkgreen','forestgreen','lightgreen','lightgreen'],
     title='Number of Caused False Warning HD',
@@ -213,6 +216,7 @@ lolypop2 = px.bar(
     nov3_3_lv.sort_values('Total Deviation', ascending = False),
     x = 'Total Deviation',
     y = 'Caused',
+    text_auto='.2s',
     color = 'Caused',
     color_discrete_sequence=['darkgreen','forestgreen','lightgreen','lightgreen'],
     title='Number of Caused False Warning LV',
@@ -233,9 +237,9 @@ app.layout = html.Div(children=[
         ### BREAK
         dbc.Row([
             
-            dbc.Card(
-                html.H3('Evaluation Mining Eyes Analytics Model', className="card-title", style={'textAlign': 'center'}),
-            ),
+            #dbc.Card(
+                html.H1('Overview', className="card-title", style={'textAlign': 'center'}),
+            #),
             
         ]),
         html.Br(),
@@ -422,6 +426,16 @@ app.layout = html.Div(children=[
             
         # ]),
         # html.Br(),
+
+         ### BREAK
+        dbc.Row([
+            
+            #dbc.Card(
+                html.H1('Analysis False Warning Mining Eyes Analytics', className="card-title", style={'textAlign': 'center'}),
+            #),
+            
+        ]),
+        html.Br(),
         ## ROW 4
         dbc.Row([
             ##--COLUMN 1
